@@ -1,9 +1,8 @@
-/* h1 {
-    text-align: center;
-    background-color: rgb(224, 39, 39);
+.dark{
+    background-color:black;
+    color:white;
 }
-
-#year{
-   
-    background-color: green;
-} */
+.light{
+    background-color:white;
+    color:black;
+}

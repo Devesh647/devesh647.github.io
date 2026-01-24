@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // 4. Redirect to the homepage after 2 seconds
             setTimeout(() => {
-                window.location.href = "index.html"; 
+                window.location.href = "Books/index.html"; 
             }, 2000);
         });
     }

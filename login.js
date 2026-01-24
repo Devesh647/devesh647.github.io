@@ -4,23 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (loginForm) {
         loginForm.addEventListener("submit", (e) => {
-            // 1. Prevent the page from refreshing immediately
+            // 1. Prevent the page from refreshing or redirecting
             e.preventDefault();
 
             // 2. Show the success message
             message.style.display = "block";
-            message.innerText = "Successfully Registered! Redirecting...";
+            message.innerText = "Successfully Registered!"; // Removed "Redirecting..."
 
-            // 3. Update the button to show it's working
+            // 3. Optional: Clear the input fields so the user can see they are done
+            loginForm.reset();
+
+            // 4. Optional: Re-enable the button after a few seconds if they want to sign in again
             const btn = loginForm.querySelector("button");
-            btn.innerText = "Please wait...";
-            btn.disabled = true;
-            btn.style.opacity = "0.7";
-
-            // 4. Redirect to the homepage after 2 seconds
-            setTimeout(() => {
-                window.location.href = "Books/index.html"; 
-            }, 2000);
+            btn.innerText = "Sign In";
         });
     }
 });
